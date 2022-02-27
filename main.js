@@ -1,9 +1,7 @@
 let div = document.createElement("div")
-div.className = "demo"
+div.classList = ["demo"] // div.className = "demo" 这种写法也一样
 div.style.top = "auto"
 div.style.left = "auto"
-div.style.right = "auto"
-div.style.bottom = "auto"
 // console.log(div.classList, div.className)
 document.body.appendChild(div)
 
