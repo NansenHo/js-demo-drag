@@ -1,4 +1,8 @@
 # 用原生 JS 实现自由拖拽一个 div 
+## 实现思路
+1. 用 onmousedown onmousemove onmouseup 获取鼠标位置
+2. 将 div 弄成绝对定位，将鼠标的位置赋值到 div 的 top 和 left 上
+3. 用一个 boolean 值来做开关
 
 ## 下载运行
 + clone 或者下载压缩包之后
