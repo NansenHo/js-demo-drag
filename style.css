@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+.demo {
+    border: 1px solid red;
+    height: 100px;
+    width: 100px;
+    /* .demo absolute 脱离文档流之后，body 的高度也会变成 0 */
+    position: absolute;
+}
+
+/* 
+让 body 可以和页面可视范围刚好一样大，
+因为我们想要实现的是在 body 范围内自由拖拽，
+所以 body 如果不写好高度的话，就没有地方可以拖了
+*/
+/* 
+当然，我们也可以直接在 document 里面操作，
+那样就不用管这个 body 的高度了
+*/
+body {
+    margin: 0;
+    height: 100vh;
+}
