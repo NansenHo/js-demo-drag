@@ -2,6 +2,8 @@ let div = document.createElement("div")
 div.className = "demo"
 div.style.top = "auto"
 div.style.left = "auto"
+div.style.right = "auto"
+div.style.bottom = "auto"
 // console.log(div.classList, div.className)
 document.body.appendChild(div)
 
@@ -24,8 +26,10 @@ document.body.onmousemove = function(e){
         let nowX = parseInt(div.style.left) || 0
         let nowY = parseInt(div.style.top) || 0 
         // JS 的 .style 只能取到内联样式
-        div.style.left = nowX + deltaX + "px"
-        div.style.top = nowY + deltaY + "px"
+        let finallyX = nowX + deltaX
+        let finallyY = nowY + deltaY
+        div.style.left = finallyX + "px"
+        div.style.top = finallyY + "px"
         lastX = e.clientX
         lastY = e.clientY
     }
